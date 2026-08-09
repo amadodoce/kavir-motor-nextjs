@@ -59,19 +59,19 @@ export function HeroSection() {
           <div className="inline-flex items-center gap-2 bg-primary/20 border border-primary/30 rounded-full px-3 py-1 mb-6">
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
             <span className="text-primary text-xs font-bold tracking-widest uppercase">
-              بزرگ‌ترین نمایندگی موتورسیکلت ایران
+              نمایندگی رسمی موتورسیکلت‌های ممتاز ایران
             </span>
           </div>
 
           {/* Headline */}
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black text-foreground leading-tight mb-3 text-balance">
-            ایتل رایان
+            کویر موتور
           </h1>
           <p className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground/80 mb-4 tracking-wide">
             قدرت کویر را حس کنید
           </p>
           <p className="text-muted-foreground text-base sm:text-lg leading-relaxed mb-8 max-w-md">
-            نمایندگی رسمی KTM، کاوازاکی، هوسکوارنا و بیشتر. موتور ایده‌آل خود را بیابید و فراتر از مرزها بتازید.
+            نمایندگی رسمی KTM، کاوازاکی، هوسکوارنا، GASGAS و بیشتر. موتورسیکلت ایده‌آل خود را بیابید و با اعتماد کامل، فراتر از مرزها بتازید.
           </p>
 
           {/* CTAs */}
