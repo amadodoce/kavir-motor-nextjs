@@ -43,7 +43,7 @@ export function HeroSection() {
             alt="موتورسیکلت در حال تردد در کویر"
             fill
             priority
-            className="object-cover object-[80%_35%] sm:object-center"
+            className="object-cover object-[30%_35%] sm:object-center"
             sizes="100vw"
           />
         </div>
