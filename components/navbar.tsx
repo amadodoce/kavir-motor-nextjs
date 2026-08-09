@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 import { Menu, X, ChevronDown } from 'lucide-react'
@@ -28,15 +29,15 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group">
-            <div className="w-7 h-7 bg-primary rounded-sm flex items-center justify-center">
-              <span className="text-white text-xs font-bold">
-                ک
-              </span>
-            </div>
-            <span className="text-foreground font-bold text-base tracking-wide">
-              / کویر موتور
-            </span>
+          <Link href="/" className="flex items-center group">
+            <Image
+              src="/images/logo.png"
+              alt="کویر موتور"
+              width={292}
+              height={131}
+              className="h-8 w-auto"
+              priority
+            />
           </Link>
 
           {/* Desktop nav */}

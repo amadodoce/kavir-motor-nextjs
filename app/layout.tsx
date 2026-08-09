@@ -15,6 +15,10 @@ export const metadata: Metadata = {
     'کویر موتور نمایندگی رسمی برندهای KTM، کاوازاکی، هوسکوارنا، GASGAS، وسپا، آپریلیا، زونتس و CFMOTO در ایران. مدل‌ها را کشف کنید، سرویس رزرو کنید و نزدیک‌ترین نمایندگی را بیابید.',
   keywords: 'موتورسیکلت، KTM، کاوازاکی، هوسکوارنا، کویر موتور، موتوکراس، آدونچر، سرویس',
   generator: 'v0.app',
+  icons: {
+    icon: '/images/logo.png',
+    apple: '/images/logo.png',
+  },
 }
 
 export const viewport: Viewport = {

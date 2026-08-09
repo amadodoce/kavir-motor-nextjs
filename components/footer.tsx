@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { Phone, Mail, MapPin, Share2, PlayCircle, Globe } from 'lucide-react'
 
 const footerLinks = {
@@ -25,13 +26,14 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand column */}
           <div className="lg:col-span-1">
-            <Link href="/" className="flex items-center gap-2 mb-4">
-              <div className="w-7 h-7 bg-primary rounded-sm flex items-center justify-center">
-                <span className="text-white text-xs font-bold">ک</span>
-              </div>
-              <span className="text-foreground font-bold text-base tracking-wide">
-                / کویر موتور
-              </span>
+            <Link href="/" className="flex items-center mb-4">
+              <Image
+                src="/images/logo.png"
+                alt="کویر موتور"
+                width={292}
+                height={131}
+                className="h-9 w-auto"
+              />
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed mb-4">
               نمایندگی رسمی برندهای موتورسیکلت ممتاز در ایران. دورتر برانید، جسورانه‌تر برانید.
