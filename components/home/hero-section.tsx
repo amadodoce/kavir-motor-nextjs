@@ -1,19 +1,52 @@
+'use client'
+
 import Link from 'next/link'
 import Image from 'next/image'
+import { useEffect, useRef, useState } from 'react'
 
 export function HeroSection() {
+  const sectionRef = useRef<HTMLElement | null>(null)
+  const [parallax, setParallax] = useState(0)
+
+  useEffect(() => {
+    let raf = 0
+    const onScroll = () => {
+      cancelAnimationFrame(raf)
+      raf = requestAnimationFrame(() => {
+        const sectionHeight = sectionRef.current?.offsetHeight ?? window.innerHeight
+        const maxOffset = Math.max(sectionHeight * 0.18, 120)
+        const next = Math.min(window.scrollY * 0.35, maxOffset)
+        setParallax(next)
+      })
+    }
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    window.addEventListener('resize', onScroll)
+    return () => {
+      window.removeEventListener('scroll', onScroll)
+      window.removeEventListener('resize', onScroll)
+      cancelAnimationFrame(raf)
+    }
+  }, [])
+
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
+    <section ref={sectionRef} className="relative min-h-screen flex items-center overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="/images/hero-bg.png"
-          alt="موتورسیکلت در حال تردد در کویر"
-          fill
-          priority
-          className="object-cover object-center"
-          sizes="100vw"
-        />
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        {/* Parallax layer — extends beyond the hero and translates on scroll */}
+        <div
+          className="absolute left-0 right-0 -top-[20%] h-[140%] will-change-transform"
+          style={{ transform: `translate3d(0, ${parallax}px, 0) scale(1.05)` }}
+        >
+          <Image
+            src="/images/hero-bg.png"
+            alt="موتورسیکلت در حال تردد در کویر"
+            fill
+            priority
+            className="object-cover object-center"
+            sizes="100vw"
+          />
+        </div>
         {/* Dark gradient overlay */}
         <div className="absolute inset-0 bg-background/60" />
         <div className="absolute inset-0 bg-[linear-gradient(to_left,oklch(0.08_0_0/90%)_0%,oklch(0.08_0_0/40%)_60%,transparent_100%)]" />
