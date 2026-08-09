@@ -180,12 +180,12 @@ export default function AboutPage() {
               هشت تولیدکننده جهانی، یک نمایندگی رسمی.
             </p>
           </div>
-          <div className="grid grid-cols-4 sm:grid-cols-8 gap-3">
+          <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3">
             {brands.map((brand, idx) => (
               <Link
                 key={`${brand}-${idx}`}
                 href={`/models?brand=${brand.toLowerCase()}`}
-                className="flex items-center justify-center h-14 sm:h-16 rounded-lg bg-card border border-border text-foreground font-bold text-xs sm:text-sm tracking-wide hover:border-primary/40 hover:text-primary hover:bg-secondary transition-all duration-200"
+                className="flex items-center justify-center h-14 sm:h-16 rounded-lg bg-card border border-border text-foreground font-bold text-xs sm:text-sm tracking-wide hover:border-primary/40 hover:text-primary hover:bg-secondary transition-all duration-200 px-2 text-center"
               >
                 {brand}
               </Link>

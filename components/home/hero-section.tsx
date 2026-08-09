@@ -31,7 +31,7 @@ export function HeroSection() {
           </div>
 
           {/* Headline */}
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black text-foreground leading-tight mb-3 text-balance">
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black text-foreground leading-tight mb-3 text-balance">
             ایتل رایان
           </h1>
           <p className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground/80 mb-4 tracking-wide">

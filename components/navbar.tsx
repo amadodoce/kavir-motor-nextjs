@@ -41,7 +41,7 @@ export function Navbar() {
           </Link>
 
           {/* Desktop nav */}
-          <nav className="hidden md:flex items-center gap-1">
+          <nav className="hidden lg:flex items-center gap-1">
             {navLinks.map((link) =>
               link.dropdown ? (
                 <div key={link.label} className="relative">
@@ -90,7 +90,7 @@ export function Navbar() {
           </nav>
 
           {/* CTA */}
-          <div className="hidden md:flex items-center gap-3">
+          <div className="hidden lg:flex items-center gap-3">
             <Link
               href="/dealers"
               className="px-4 py-2 text-sm font-bold bg-primary text-white rounded-md hover:bg-primary/90 transition-colors"
@@ -101,7 +101,7 @@ export function Navbar() {
 
           {/* Mobile hamburger */}
           <button
-            className="md:hidden p-2 text-muted-foreground hover:text-foreground"
+            className="lg:hidden p-2 text-muted-foreground hover:text-foreground"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label={mobileOpen ? 'بستن منو' : 'باز کردن منو'}
           >
@@ -112,7 +112,7 @@ export function Navbar() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="md:hidden border-t border-border bg-background">
+        <div className="lg:hidden border-t border-border bg-background">
           <nav className="max-w-7xl mx-auto px-4 py-3 flex flex-col gap-1">
             {navLinks.map((link) => (
               <Link

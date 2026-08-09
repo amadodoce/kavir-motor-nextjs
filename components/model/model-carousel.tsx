@@ -44,7 +44,7 @@ export function ModelCarousel({
   return (
     <div>
       {/* ── Full-width cinematic hero ── */}
-      <div className="relative w-full overflow-hidden" style={{ aspectRatio: '16/7', minHeight: 380 }}>
+      <div className="relative w-full overflow-hidden" style={{ aspectRatio: '16/7', minHeight: 340 }}>
         {/* Background motorcycle image */}
         <Image
           src={mainImage}
@@ -61,29 +61,29 @@ export function ModelCarousel({
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/30" />
 
         {/* ── Top row: brand badge (right) + spec pills (left) ── */}
-        <div className="absolute top-0 left-0 right-0 flex items-start justify-between px-6 sm:px-10 pt-6">
+        <div className="absolute top-0 left-0 right-0 flex items-start justify-between gap-2 px-4 sm:px-10 pt-6">
           {/* Spec pills — left side in RTL */}
           <div className="flex items-center gap-2">
-            <div className="bg-black/60 backdrop-blur-sm border border-white/15 rounded-lg px-4 py-1.5">
+            <div className="bg-black/60 backdrop-blur-sm border border-white/15 rounded-lg px-3 py-1">
               <span className="text-white font-bold text-sm" dir="ltr">{cc} cc</span>
             </div>
-            <div className="bg-black/60 backdrop-blur-sm border border-white/15 rounded-lg px-4 py-1.5">
+            <div className="bg-black/60 backdrop-blur-sm border border-white/15 rounded-lg px-3 py-1">
               <span className="text-white font-bold text-sm" dir="ltr">{weight} kg</span>
             </div>
           </div>
 
           {/* Brand + category — right side in RTL */}
           <div className="flex items-center gap-2">
-            <span className="text-white/80 text-xs font-bold tracking-wide">{category}</span>
-            <span className="bg-primary text-white text-xs font-black px-3 py-1 rounded-sm tracking-widest uppercase">
+            <span className="hidden sm:inline text-white/80 text-xs font-bold tracking-wide">{category}</span>
+            <span className="bg-primary text-white text-xs font-black px-3 py-1 rounded-sm tracking-widest uppercase whitespace-nowrap">
               {brand}
             </span>
           </div>
         </div>
 
         {/* ── Centre-right: headline + tagline (RTL: text starts from right) ── */}
-        <div className="absolute inset-0 flex flex-col justify-center items-end px-6 sm:px-10 pb-20 max-w-2xl mr-0 ml-auto text-right">
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black text-white leading-none tracking-tight text-balance mb-3 drop-shadow-xl">
+        <div className="absolute inset-0 flex flex-col justify-center items-end px-4 sm:px-10 pb-20 max-w-2xl mr-0 ml-auto text-right">
+          <h1 className="text-4xl sm:text-5xl lg:text-7xl font-black text-white leading-none tracking-tight text-balance break-words mb-3 drop-shadow-xl">
             {name}
           </h1>
           <p className="text-white/70 text-sm sm:text-base leading-relaxed max-w-sm drop-shadow">
@@ -92,7 +92,7 @@ export function ModelCarousel({
         </div>
 
         {/* ── Bottom row: CTAs + brand tags ── */}
-        <div className="absolute bottom-0 left-0 right-0 flex items-end justify-between px-6 sm:px-10 pb-6">
+        <div className="absolute bottom-0 left-0 right-0 flex items-end justify-between gap-3 px-4 sm:px-10 pb-5">
           {/* Suspension brand tags — left in RTL */}
           <div className="hidden sm:flex items-center gap-3">
             <span className="text-white/50 text-xs font-medium tracking-wider">WP XACT</span>
@@ -101,17 +101,17 @@ export function ModelCarousel({
           </div>
 
           {/* CTA buttons — right in RTL */}
-          <div className="flex items-center gap-3">
+          <div className="flex flex-wrap items-center justify-end gap-2">
             <Link
               href="/dealers"
-              className="inline-flex items-center gap-2 px-5 py-2.5 bg-black/60 backdrop-blur-sm text-white font-bold rounded-md hover:bg-black/80 active:scale-95 transition-all text-sm border border-white/20 shadow-lg"
+              className="inline-flex items-center gap-2 px-4 sm:px-5 py-2.5 bg-black/60 backdrop-blur-sm text-white font-bold rounded-md hover:bg-black/80 active:scale-95 transition-all text-sm border border-white/20 shadow-lg"
             >
               <MapPin className="w-4 h-4" />
               یافتن نمایندگی
             </Link>
             <Link
               href="/service"
-              className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary text-white font-bold rounded-md hover:bg-primary/90 active:scale-95 transition-all text-sm shadow-lg"
+              className="inline-flex items-center gap-2 px-4 sm:px-5 py-2.5 bg-primary text-white font-bold rounded-md hover:bg-primary/90 active:scale-95 transition-all text-sm shadow-lg"
             >
               <MessageCircle className="w-4 h-4" />
               استعلام قیمت
